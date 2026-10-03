@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <Deterministic>true</Deterministic>
+    <IsAotCompatible>true</IsAotCompatible>
+    <!-- Source-generated P/Invoke ([LibraryImport]) for ConsoleTerminal emits an unsafe stub. -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <!-- NuGet package identity (local feed; eventually its own GitHub repo). -->
+  <PropertyGroup>
+    <PackageId>Schipper.Io.Xterm</PackageId>
+    <Version>0.1.0-dev</Version>
+    <Authors>Schipper</Authors>
+    <Company>SCHIPPER.IO LLC</Company>
+    <Product>Schipper.Io.Xterm</Product>
+    <Description>Zero-dependency modern terminal toolkit: emit modern xterm sequences (OSC titles/hyperlinks/clipboard, mouse, bracketed paste, focus, cursor styles, synchronized output), decode rich input (SGR mouse, paste, focus, modified/CSI-u keys), and lay out screens (header/footer/content regions, modal dialogs, fullscreen, splash).</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Schipper.Io.Xterm.Tests" />
+  </ItemGroup>
+
+</Project>

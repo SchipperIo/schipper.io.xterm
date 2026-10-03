@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Schipper.Io.FileBrowser</RootNamespace>
+    <AssemblyName>FileBrowser</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Schipper.Io.Xterm.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Local source reference. In a real app this would be:
+         <PackageReference Include="Schipper.Io.Xterm" Version="0.1.0-dev" /> -->
+    <ProjectReference Include="..\src\Schipper.Io.Xterm.csproj" />
+  </ItemGroup>
+
+</Project>
